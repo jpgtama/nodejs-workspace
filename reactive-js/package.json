@@ -9,8 +9,12 @@
     "prebuild": "npm run clean && npm run init",
     "babel-version": "babel --version",
     "build:single": "babel ./src/index.js -o ./dist/index.js --presets es2015",
-    "build": "babel src -d dist --presets es2015",
-    "test": "mocha --compilers js:babel-core/register ./src/**/*.test.js"
+    "build": "babel src -d dist --ignore test.js",
+    "pretest": "npm run build",
+    "test": "mocha --compilers js:babel-core/register ./src/**/*.test.js",
+    "test:single": "mocha --compilers js:babel-core/register ",
+    "start": "npm run dev",
+    "dev": "npm test -- -w"
   },
   "author": "Hugo Di Francesco",
   "license": "ISC",
@@ -21,5 +25,8 @@
     "babel-preset-es2015": "^6.24.1",
     "chai": "^4.1.2",
     "mocha": "^5.0.1"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
