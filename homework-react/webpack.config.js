@@ -1,12 +1,12 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
-   entry: './main.js',
+   entry: './src/main.js',
    output: {
       path: __dirname + '/dist',
       filename: 'bundle.js',
    },
-   plugins: [new HtmlWebpackPlugin({title: 'Hello React APP', template: 'index.html'})],
+   plugins: [new HtmlWebpackPlugin({title: 'Homework React Version', template: 'src/index.html'})],
    devServer: {
       inline: true,
       port: 7777
