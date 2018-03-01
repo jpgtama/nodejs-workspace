@@ -1,6 +1,8 @@
 import React from 'react';
 import databus from '../services/databus.js'
 
+import TaskItem from './TaskItem.jsx'
+
 class TaskList extends React.Component {
 
   componentWillMount() {
@@ -35,7 +37,7 @@ class TaskList extends React.Component {
          <div className="tasklist">
             <ul>
               {this.state.data.map(
-                  (d, i) =>  <li key={i}>{d.name}</li>
+                  (d, i) =>  <TaskItem key={i} task={d}/>
               )}
             </ul>
          </div>

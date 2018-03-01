@@ -1,13 +1,23 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 import TaskList from './TaskList.jsx'
 
 class App extends React.Component {
    render() {
       return (
-         <div className="app">
-            Hello Homework!!!
-            <TaskList />
-         </div>
+         <Router>
+             <div className="app">
+                Hello Homework!!!
+                <TaskList />
+
+                <Switch>
+                    <Route exact path='/taskItem' render={()=>'TaskItem xxx'} />
+            
+                 </Switch>
+
+             </div>
+         </Router>
       );
    }
 }
