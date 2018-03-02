@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 
-class Header extends React.Component{
+class Home extends React.Component{
     componentWillMount() {
     }
     componentDidMount() {
@@ -28,18 +27,10 @@ class Header extends React.Component{
 
     render(){
         return (
-          <header>
-            <nav>
-              <ul>
-                <li><Link replace to='/'>Home</Link></li>
-                <li><Link replace to='/taskList'>TaskList</Link></li>
-              </ul>
-            </nav>
-          </header>
-
+            <div>This is Home</div>
         );
     }
 
 }
 
-export default Header;
+export default Home;

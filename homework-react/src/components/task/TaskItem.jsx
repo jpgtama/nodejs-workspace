@@ -30,7 +30,7 @@ class TaskItem extends React.Component{
     render(){
         return (
             <li className="taskItem">
-                <Link to={'/taskItem/'+this.props.task.id}>{this.props.task.name}</Link>
+                <Link replace to={'/taskItemDetail/'+this.props.task.id}>{ this.props.task.id + ' - ' +   this.props.task.name}</Link>
             </li>
         );
     }

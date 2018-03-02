@@ -17,7 +17,7 @@ databus.getTaskList = function(){
 
 
 
-  return [{name:'Task 001', id:''}, {name:'Task 002', id:''}];
+  return [{name:'Task 001', id:'1'}, {name:'Task 002', id:'2'}];
 };
 
 

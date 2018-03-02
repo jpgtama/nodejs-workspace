@@ -1,5 +1,5 @@
 import React from 'react';
-import databus from '../services/databus.js'
+import databus from '../../services/databus.js'
 
 import TaskItem from './TaskItem.jsx'
 
@@ -28,8 +28,6 @@ class TaskList extends React.Component {
     this.state = {
        data: databus.getTaskList()
     }
-
-    console.log(this.state.data)
   }
 
    render() {
