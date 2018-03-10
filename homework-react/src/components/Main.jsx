@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './home/Home.jsx';
 import TaskList from './task/TaskList.jsx'
 import TaskItemDetail from './task/TaskItemDetail.jsx'
+import TaskManager from './task/TaskManager.jsx'
 
 class Main extends React.Component{
     componentWillMount() {
@@ -35,9 +36,8 @@ class Main extends React.Component{
           <main>
              <Switch>
                <Route exact path='/' component={Home}/>
-               <Route exact path='/taskList' component={TaskList}/>
                <Route exact path='/taskItemDetail/:id' component={TaskItemDetail}/>
-
+               <Route exact path='/taskManager' component={TaskManager}/>
              </Switch>
          </main>
         );

@@ -29,20 +29,12 @@ class Header extends React.Component{
     }
 
     render(){
-      var ulStyle = {
-        listStyleType: 'none'
-      };
-      var liStyle = {
-          display: 'inline-block'
-      };
-
-
         return (
           <header>
             <nav>
-              <ul className="ulStyle">
-                <li className="liStyle"><Link replace to='/'>Home</Link></li>
-                <li className="liStyle"><Link replace to='/taskList'>TaskList</Link></li>
+              <ul>
+                <li><Link replace to='/'>Home</Link></li>
+                <li><Link replace to='/taskManager'>TaskManager</Link></li>
               </ul>
             </nav>
           </header>

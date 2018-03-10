@@ -1,4 +1,5 @@
 import React from 'react';
+import TaskList from '../task/TaskList.jsx'
 
 class Home extends React.Component{
     componentWillMount() {
@@ -27,7 +28,9 @@ class Home extends React.Component{
 
     render(){
         return (
-            <div>This is Home</div>
+            <div>你今天的作业有这些：
+              <TaskList/>
+            </div>
         );
     }
 
