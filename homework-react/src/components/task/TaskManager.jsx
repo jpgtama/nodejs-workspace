@@ -1,6 +1,7 @@
 import React from 'react';
 import databus from '../../services/databus.js'
-
+import { Switch, Route } from 'react-router-dom';
+import NewTask from './NewTask.jsx'
 import TaskItem from './TaskItem.jsx'
 
 class TaskManager extends React.Component {
@@ -32,9 +33,15 @@ class TaskManager extends React.Component {
 
    render() {
       return (
-         <div className="tasklist">
-            <button>View Task</button>
+         <div className="taskManager">
+            <button>View Task List</button>
             <button>New Task</button>
+
+            <Switch>
+              <Route exact path='/taskManager/taskList' render="I am in progress."/>
+              <Route exact path='/taskManager/newTask' component={NewTask}/>
+            </Switch>
+
 
          </div>
       );
