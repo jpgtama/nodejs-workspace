@@ -30,7 +30,13 @@ class NewTask extends React.Component{
     render(){
         return (
             <div className="NewTask">
-                Hello, NewTask.
+              <form method="POST" encType="multipart/form-data" action="/contextService-fileUploader/fileStore">
+                  File to upload: <input type="file" name="upfile"/><br/>
+                Notes about the file: <input type="text" name="note"/><br/>
+                  <br/>
+                  <input type="submit" value="Press"/> to upload the file!
+              </form>
+
             </div>
         );
     }

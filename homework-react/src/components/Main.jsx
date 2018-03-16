@@ -34,11 +34,11 @@ class Main extends React.Component{
     render(){
         return (
           <main>
-             <Switch>
+
                <Route exact path='/' component={Home}/>
                <Route exact path='/taskItemDetail/:id' component={TaskItemDetail}/>
-               <Route exact path='/taskManager' component={TaskManager}/>
-             </Switch>
+               <Route path='/taskManager' component={TaskManager}/>
+
          </main>
         );
     }
